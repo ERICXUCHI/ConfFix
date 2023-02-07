@@ -44,7 +44,7 @@ export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/bin:$
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_AVD_HOME=~/.android/avd
 export PATH=$PATH:$ANDROID_AVD_HOME
-cd /SDK/android_sdk_linux
+cd /yourname/SDK/
 cp system-images/ ./android_sdk_linux/ -r
 ```
 
