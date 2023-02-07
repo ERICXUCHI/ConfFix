@@ -27,25 +27,25 @@ We also release the experimental results of ConfFix, XFix and Lint in ```./evalu
 ### 1. Create emulators
 1. Download Android SDK Command line tools [link](https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip)
 
-Rename cmdline-tools to be tools and put it under an SDK root folder (e.g., ```/ssddata/yourname/SDK/android_sdk_linux```). So now the tools path will be ```/ssddata/yourname/SDK/android_sdk_linux/tools```
-
-2. Rename cmdline-tools to be tools and put it under an SDK root folder (e.g., ```/ssddata/yourname/SDK/android_sdk_linux```). So now the tools path will be ```/ssddata/yourname/SDK/android_sdk_linux/tools```
+2. Rename cmdline-tools to be tools and put it under an SDK root folder (e.g., ```/yourname/SDK/android_sdk_linux```). So now the tools path will be ```/yourname/SDK/android_sdk_linux/tools```
 
 3. Navigate to the SDK root and type in the following commands to install necessary files for the SDK
 ```
-(1) tools/bin/sdkmanager --sdk_root=/ssddata/yourname/SDK/android_sdk_linux --install "system-images;android-33;google_apis;x86_64"
-(2) tools/bin/sdkmanager --sdk_root=/ssddata/yourname/SDK/android_sdk_linux --install "platforms;android-33"
-(3) tools/bin/sdkmanager --sdk_root=/ssddata/yourname/SDK/android_sdk_linux --install "platform-tools"
-(4) tools/bin/sdkmanager --sdk_root=/ssddata/yourname/SDK/android_sdk_linux --install "emulator"
+(1) tools/bin/sdkmanager --sdk_root=/yourname/SDK --install "system-images;android-33;google_apis;x86_64"
+(2) tools/bin/sdkmanager --sdk_root=/yourname/SDK/android_sdk_linux --install "platforms;android-33"
+(3) tools/bin/sdkmanager --sdk_root=/yourname/SDK/android_sdk_linux --install "platform-tools"
+(4) tools/bin/sdkmanager --sdk_root=/yourname/SDK/android_sdk_linux --install "emulator"
 ```
 4. Add something into PATH
 
 ```
-export ANDROID_HOME=/ssddata/yourname/SDK/android_sdk_linux
+export ANDROID_HOME=/yourname/SDK/android_sdk_linux
 export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/emulator:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export ANDROID_AVD_HOME=~/.android/avd
 export PATH=$PATH:$ANDROID_AVD_HOME
+cd /SDK/android_sdk_linux
+cp system-images/ ./android_sdk_linux/ -r
 ```
 
 5. Create an folder under the SDK root named avds and create an Android emulator: 
